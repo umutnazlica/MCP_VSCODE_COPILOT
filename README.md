@@ -90,35 +90,63 @@ commit;
 ```
 You should be able to see new connection from VS Code -> SQL Developer -> Connections <br>
 
+### 🌟 Now fun part starts, first we connect with dba priviliges and do some dba work.
+
+From VS Code open CoPilot Chat and start interaction with chat by giving prompts. <br>
+```bash
 connect to database oracledb_mcp_sys
+```
 
-You are now connected to the oracledb_mcp Oracle database. The connection is active, and the database is in READ WRITE mode (Oracle 23.0.0.0.0). NLS parameters are set, including character set AL32UTF8. You can proceed with your queries or admin tasks.
+>You are now connected to the oracledb_mcp_sys database. The database is in READ WRITE mode and ready for administrative or development tasks. Let me know what you would like to do next!
+```bash
+I have several request from you to complete: first please create me a pluggable database called hrpdb, put hrpdb read write mode, and save hrpdb state, create a new user HR with password YourPasswordHere in hrpdb, put HR user to db_developer_role, create a new tablespace HR_TS in hrpdb,make HR_TS as default tablespace for user HR, set quote unlimited to HR user for HR_TS 
+```
 
-please create me a user in pluggabe database FREEPDB1 named testuser with password "TypeYourPasswordHere" which has enough priviliges for developer to create and manage database objects only in FREEPDB1 pluggable database
+>Pluggable database hrpdb has been created, opened in read-write mode, and its state saved.
+>Tablespace HR_TS has been created in hrpdb.
+>User HR has been created with password YourPasswordHere, default tablespace HR_TS, and unlimited quota on HR_TS.
+>The db_developer_role has been granted to user HR.
+```bash
+sql /nolog
+```
+```bash
+cm list
+```
+```bash
+CONNECT -save oracledb_mcp_hr -savepwd hr/YourPasswordHere@//localhost:1521/hrpdb;
+```
 
-{
-  "mcp_client": "GitHub Copilot",
-  "model": "gpt-4.1",
-  "sql": "ALTER SESSION SET CONTAINER=FREEPDB1;\nCREATE /* LLM in use is gpt-4.1 */ USER testuser IDENTIFIED BY \"P4ssw0rd1234\";\nGRANT CONNECT, RESOURCE TO testuser;\nGRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SYNONYM TO testuser;"
-}
+### 🌟 Then we disconnect and reconnect with developer priviliges and do some development work.
 
-The user testuser has been created in the pluggable database FREEPDB1 with the password "YourPassword". This user has privileges to create and manage database objects (tables, views, procedures, sequences, triggers, types, synonyms) only within FREEPDB1. You can now use this account for development tasks in that pluggable database.
+```bash
+disconnect and connect to oracledb_mcp_hr
+```
+```bash
+i want to create new objects in hrpdb in hr schema using script /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/runsql.sql
+```
 
-Please keep the user but revoke permissions, assign testuser to db_developer_role which is available with Oracle Database 23ai, more information can be found in https://blogs.oracle.com/database/post/oracle-database-23c-new-feature-db-developer-role
+>The script runsql.sql has been executed in the hrpdb database under the HR schema. The EMPLOYEES table was created and populated with 5 rows. Let me know if you want to create more objects or need further actions!
 
-{
-  "mcp_client": "GitHub Copilot",
-  "model": "gpt-4.1",
-  "sql": "ALTER SESSION SET CONTAINER=FREEPDB1;\nREVOKE CONNECT, RESOURCE, CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SYNONYM FROM testuser;\nGRANT db_developer_role TO testuser;"
-}
+```bash
+please create me more comprehensive data model based on using existing EMPLOYEES table under HR schema
+```
+> A comprehensive HR data model has been created in the HR schema:
+> DEPARTMENTS, JOBS, and LOCATIONS tables have been created.
+> The EMPLOYEES table has been altered to add foreign keys and a primary key.
+> The JOB_HISTORY table has been created with references to EMPLOYEES and JOBS.
+> Your HR schema is now ready for more advanced HR scenarios. Let me know if you want to insert sample data or need further actions!
+```bash
+please insert sample data to other tables using sample data inserted in EMPLOYEE table with keeping referential integrity
+```
+>Sample data has been inserted into the DEPARTMENTS, JOBS, LOCATIONS, and JOB_HISTORY tables, and the EMPLOYEES table has been updated to >maintain referential integrity. All relationships are consistent with the existing employee data.
+>Let me know if you need to view the data, add more records, or perform further actions!
 
-The permissions for testuser have been revoked, and the user has been assigned the db_developer_role in the FREEPDB1 pluggable database. This role is available in Oracle Database 23ai and provides appropriate privileges for development tasks.
-
-I am done with the connectiopn can you please close it
-
-
-
-
+```bash
+show me the records of all user tables
+```
+```bash
+i want to create table create scripts including drop if exists for all user tables in HR schema, and insert scripts for all user table records considering referential integrity, save the scipts to /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/runsql2.sql file, if file not exists you can create the file. If file exists you can update the file.
+```
 
 ### 🔧 Configuration
 
