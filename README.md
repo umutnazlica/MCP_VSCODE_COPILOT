@@ -27,7 +27,7 @@ Vibe Coding is becoming a very popular trend, but introduces some security risks
 
 ## 🌟 Assumptions
 
-- We need Oracle database connection (in my case Oracle Database 23ai Free image running on Podman on my Mac Notebook, You can use other Oracle Database Connection options as well like Autonomous Database.). More instructions can be found: <br>
+- We need Oracle database connection (In my case Oracle Database 23ai Free image running on Podman on my Mac Notebook, You can use other Oracle Database options as well, like Autonomous Database). More instructions can be found: <br>
 https://github.com/umutnazlica/Podman_Mac_DB23AI_APEX
 
 ---
@@ -46,7 +46,9 @@ https://github.com/umutnazlica/Podman_Mac_DB23AI_APEX
   ```bash
   export PATH=/opt/homebrew/Caskroom/SQLcl/25.2.2.199.0918/SQLcl/bin:"$PATH"
   ```
-If you prefer manual download, SQLcl downlod link: https://www.oracle.com/database/sqldeveloper/technologies/SQLcl/download/, please download, extract and copy to your working directory, and modify export PATH command.<br>
+If you prefer manual download, SQLcl downlod link: <br>
+https://www.oracle.com/database/sqldeveloper/technologies/SQLcl/download/ <br>
+please download, extract and copy SQLcl folder to your working directory, and modify export PATH command.<br>
 
 Check if this version of SQLcl supports MCP? <br>
 ```bash
