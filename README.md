@@ -31,6 +31,7 @@ In my case : /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/runsql.sql (included 
 ## 🌟 Additional Resources
 
 https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug/using-oracle-sqlcl-mcp-server.html<br>
+https://connor-mcdonald.com/2025/07/14/first-dabblings-with-sqlcl-mcp-server/<br>
 https://blogs.oracle.com/database/post/introducing-mcp-server-for-oracle-database<br>
 https://www.thatjeffsmith.com/archive/2025/07/getting-started-with-our-mcp-server-for-oracle-database/<br>
 https://youtu.be/hj6WoZVGUBg <br>
@@ -100,6 +101,9 @@ https://blogs.oracle.com/database/post/how-can-developers-and-dbas-benefit-from-
 
 #### 🌟 Now fun part starts, first we connect to database with dba priviliges and do some dba work.
 
+- From VS Code, list the MCP servers to make sure you see SQLcl, and ensure that it is started and running.<br>
+  From VS Code Menu, View -> Command Palette -> MCP:List Servers (verify sqlcl is running) <br>
+- Set Copilot Chat to Agent mode and pick the model you want to use.
 - From VS Code open CoPilot Chat and start interaction with chat by giving prompts. <br>
   ```bash
   connect to database oracledb_mcp_sys
