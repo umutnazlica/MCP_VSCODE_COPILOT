@@ -103,7 +103,8 @@ https://blogs.oracle.com/database/post/how-can-developers-and-dbas-benefit-from-
 
 - From VS Code, list the MCP servers to make sure you see SQLcl, and ensure that it is started and running.<br>
   From VS Code Menu, View -> Command Palette -> MCP:List Servers (verify sqlcl is running) <br>
-- Set Copilot Chat to Agent mode and pick the model you want to use.
+- Set Copilot Chat to Agent mode and pick the model you want to use. (I use GPT-4.1)<br>
+  <img width="1020" height="572" alt="Image" src="https://github.com/user-attachments/assets/d871cce9-11a8-4f9e-a4e0-001c37131e86" />
 - From VS Code open CoPilot Chat and start interaction with chat by giving prompts. <br>
   ```bash
   connect to database oracledb_mcp_sys
@@ -164,7 +165,7 @@ show me the records of all user tables
 ```bash
 i want to create table create scripts including drop if exists for all user tables in HR schema, and insert scripts for all user table records considering referential integrity, save the scipts to /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/runsql2.sql file, if file not exists you can create the file. If file exists you can update the file.
 ```
-> Successsfully created the new sql file runsql2.sql, included in github repo as well
+> New created file is included in github repository as well for you to review.
 
 ### 🌟 Monitoring and Security
 
