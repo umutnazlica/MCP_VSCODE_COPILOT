@@ -156,7 +156,7 @@ please create me more comprehensive data model based on using existing EMPLOYEES
 ```bash
 please insert sample data to other tables using sample data inserted in EMPLOYEE table with keeping referential integrity
 ```
->Sample data has been inserted into the DEPARTMENTS, JOBS, LOCATIONS, and JOB_HISTORY tables, and the EMPLOYEES table has been updated to >maintain referential integrity. All relationships are consistent with the existing employee data.
+>Sample data has been inserted into the DEPARTMENTS, JOBS, LOCATIONS, and JOB_HISTORY tables, and the EMPLOYEES table has been updated to maintain referential integrity. All relationships are consistent with the existing employee data.
 >Let me know if you need to view the data, add more records, or perform further actions!
 
 ```bash
