@@ -182,8 +182,8 @@ I used and test the SQLcl MCP functionality with connecting to a containerized O
 In order to test some admin tasks i connect with account that has admin priviliges. Since this is a play ground for me to test the capabilities of SQLcl MCP. <br>
 
 Some recommendations as suggested in the blogs and official documentation:
-  - Think twice and hard before ever letting the tool connect to a production or any critical database environment.
-  - Don’t let the tool connect to an account with any kind of privilege that could damage your data/database. Use least privilage principal! This will limit what is accessible to the LLM.
+  - Avoid letting the tool to connect to a production or any critical database environment.
+  - Don’t let the tool to connect using an account with any kind of privilege that could damage your data/database. Use least privilage principal! This will limit what is accessible to the LLM.
   - Always review requested actions before approving them. Do not use 'Always Allow' when asked for confirmation, verify first.
 
 
