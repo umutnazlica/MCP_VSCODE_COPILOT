@@ -170,6 +170,12 @@ show me the records of all user tables
 i want to create table create scripts including drop if exists for all user tables in HR schema, and insert scripts for all user table records considering referential integrity, save the scipts to /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/runsql2.sql file, if file not exists you can create the file. If file exists you can update the file.
 ```
 > New created file is included in github repository as well for you to review.
+> 
+```bash
+Create an entity-relationship diagram to visualize the schemafor HR schema, save the diagram in the database and also save the diagram as svg format in /Users/umutnazlica/git/MCP/MCP_VSCODE_COPILOT/ folder, name it as HRSchemaDiagram.svg
+```
+> New diagram file is created and included in github repository as well for you to review. But couldn't find it in the database.
+
 
 ### 🌟 Monitoring and Security
 
