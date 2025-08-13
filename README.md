@@ -35,8 +35,11 @@ https://connor-mcdonald.com/2025/07/14/first-dabblings-with-sqlcl-mcp-server/<br
 https://blogs.oracle.com/database/post/introducing-mcp-server-for-oracle-database<br>
 https://www.thatjeffsmith.com/archive/2025/07/getting-started-with-our-mcp-server-for-oracle-database/<br>
 https://youtu.be/hj6WoZVGUBg <br>
+https://youtu.be/8NNypzsRa0g?si=ZQk23RrvEFKT3dsn <br>
 https://blogs.oracle.com/database/post/how-can-developers-and-dbas-benefit-from-mcp-server-for-oracle-database <br>
 https://www.linkedin.com/pulse/unlocking-power-model-context-protocol-mcp-oracle-database-rao-l2hsf?trk=public_post_feed-article-content <br>
+https://hartenfeller.dev/blog/demystifying-sqlcl-mcp-server <br>
+https://github.com/oracle/mcp/tree/main/src/dbtools-mcp-server <br>
 
 
 ---
