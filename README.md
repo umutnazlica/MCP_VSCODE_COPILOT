@@ -52,7 +52,7 @@ https://github.com/oracle/mcp/tree/main/src/dbtools-mcp-server <br>
   ```bash
   brew install SQLcl
   ```
-  SQLcl requires Java 11+. You can install the latest version with:<br>
+  SQLcl MCP requires Java 17+. You can install the latest version with:<br>
   ```bash
   brew install --cask temurin
   ```
